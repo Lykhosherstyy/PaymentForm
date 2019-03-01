@@ -1,1 +1,0 @@
-# Payment form - Test task.
