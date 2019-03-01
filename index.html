@@ -35,7 +35,7 @@
 					<div class="form_group">
 						<label for="card_number">Kartın nömrəsi</label>
 						<div class="input-wr">
-							<input type="number" id="card_number" name="card_number" class="form-control bordered validate" placeholder="0000 - 0000 - 0000 - 0000" autocomplete="off" maxlength="25">
+							<input type="text" id="card_number" name="card_number" class="form-control bordered validate" placeholder="0000 - 0000 - 0000 - 0000" autocomplete="off" maxlength="25" pattern="^[0-9\s-]{25}" inputmode="numeric">
 							<span class="right-icon">
 									<i class="card bordered">
 										<span class="card_point"></span>
@@ -49,13 +49,13 @@
 					<div class="d-flex divided_fileds">
 						<div class="form_group form_group_sm">
 							<label for="expire_date">Bitmə tarixi</label>
-							<input type="text" id="expire_date" name="expire_date" class="form-control bordered validate" placeholder="00 / 00" autocomplete="off" maxlength="5" disabled>
+							<input type="text" id="expire_date" name="expire_date" class="form-control bordered validate" placeholder="00 / 00" autocomplete="off" maxlength="5" pattern="^(0[1-9]|1[012])[/][0-9]{2}$" inputmode="numeric" disabled>
 						</div>
 						<div class="form_group form_group_lg">
 							<label for="cvv">CVV/CVC2</label>
 							<div class="d-flex flex-align-center">
 								<div class="input-wr">
-									<input id="cvv" type="password" name="cvv"  autocomplete="off" class="form-control bordered validate" placeholder="***" maxlength="3"  min="0" max="999" disabled>
+									<input id="cvv" type="password" name="cvv"  autocomplete="off" class="form-control bordered validate" placeholder="***" maxlength="3"  min="0" max="999" pattern="^[0-9]{3}" inputmode="numeric" disabled>
 									<span class="right-icon">
 										<i class="card card_cvv bordered"></i>
 									</span>
