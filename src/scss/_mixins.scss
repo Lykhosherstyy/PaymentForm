@@ -1,0 +1,37 @@
+//Centering
+@mixin center($center-all) {
+  position: absolute;
+  @if $center-all == both {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @else {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+//media queries
+@mixin mq($width, $type: min, $height:null) {
+  @if $type == max {
+    $width: $width - 1;
+  }
+  @if ($height) {
+    @media only screen and (#{$type}-width: $width + 0px) and (min-height: $height + 0px) {
+      @content;
+    }
+  } @else{
+    @media only screen and (#{$type}-width: $width + 0px) {
+      @content;
+    }
+  }
+}
+
+// margin auto
+@mixin push--auto {
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
