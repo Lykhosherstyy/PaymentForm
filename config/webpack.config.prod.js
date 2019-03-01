@@ -47,7 +47,7 @@ module.exports = {
                 use: {
                     loader: "file-loader",
                     options: {
-                        outputPath: './../dist/static'
+                        outputPath: 'static'
                     },
                 }
             },
@@ -80,7 +80,11 @@ module.exports = {
         ]
     },
     plugins: [
-        new CleanWebpackPlugin(['dist']),
+        new CleanWebpackPlugin([__dirname + '/../dist'], {
+            root: process.cwd(),
+            verbose: true,
+            dry: false
+        }),
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: 'index.html',

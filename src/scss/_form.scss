@@ -1,17 +1,14 @@
 .form_group{
   margin-bottom: 20px;
 }
-.divided_fileds .form_group:first-child{
-  flex: 1 1 55.54%;
-  margin-right: 5.716%;
-}
-.input-wr{
-  position: relative;
-}
-.right-icon{
-  position: absolute;
-  top:12px;
-  right: 15px;
+label{
+  display: block;
+  margin: 0 0 10px;
+  color: $label-color;
+  font-size: 14px;
+  @include mq(450){
+    font-size: 12px;
+  }
 }
 .form-control{
   width: 100%;
@@ -38,6 +35,19 @@
   @include mq(450){
     padding: 15px;
   }
+}
+
+.divided_fileds .form_group:first-child{
+  flex: 1 1 55.54%;
+  margin-right: 5.716%;
+}
+.input-wr{
+  position: relative;
+}
+.right-icon{
+  position: absolute;
+  top:12px;
+  right: 15px;
 }
 
 -webkit-::placeholder{
@@ -73,7 +83,6 @@
   font-size: 14px;
   background-color: $btn-color;
 }
-
 .cvc_hint{
   flex: 0 0 95px;
   margin-left: 10px;

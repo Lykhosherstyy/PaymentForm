@@ -54,7 +54,13 @@ const formControl = {
 
         this.bindListeners();
 
-        form.onsubmit = () => this.checkForm();
+        form.onsubmit = (e) => {
+
+            this.checkForm();
+
+            e.preventDefault();
+            return false;
+        }
     },
     bindListeners:function() {
         this.validateFields = document.querySelectorAll('.validate');

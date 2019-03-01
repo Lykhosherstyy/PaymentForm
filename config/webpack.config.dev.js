@@ -54,10 +54,6 @@ module.exports = {
                             config: {
                                 path: __dirname + '/postcss.config.js'
                             }
-                            // ident: 'postcss',
-                            // plugins: [
-                            //     autoprefixer({ browsers: [ 'last 2 versions' ] })
-                            // ]
                         }
                     },
                     'sass-loader'
@@ -85,9 +81,5 @@ module.exports = {
             filename: 'main.css',
             // chunkFilename: "[id].css"
         }),
-        // new webpack.ProvidePlugin({
-        //     $: 'jquery',
-        //     jQuery: 'jquery'
-        // })
     ]
 };
